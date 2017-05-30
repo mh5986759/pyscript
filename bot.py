@@ -50,7 +50,7 @@ f = Holder()
 
 def check_cmds(bot,m,l) :
     # Commands
-    if CheckCmd(m,"^magic$") :
+    if CheckCmd(m,"^nitro$") :
         bot.reply_to(m,"*I am online my dear:)*",parse_mode="Markdown")
     elif h.set(CheckCmd(m,"^echo (.+)")) :
         bot.reply_to(m,h.get().group(1))
@@ -708,9 +708,9 @@ def langkb() :
 def ln(l,s,arg = None) :
     if s == 'started' :
         if l == 'en' :
-            return '💫 *Welcome to "Magic Anti Spam Bot" :)*\n⚜️ _Bot Created  in _ [MagicTeam](https://telegram.me/magicnews)_ with ❤️ by @jan123\nChoose One:_'
+            return '💫 *Welcome to "Nitro Anti Spam Bot" :)*\n⚜️ _Bot Created  in _ [NitroAntiSpam](https://telegram.me/NitroAntiSpam)_ with ❤️ by @MohammadHasan_rad\nChoose One:_'
         else :
-            return '💫 به ربات "آنتی اسپم مجیک " خوش امدید :)\n⚜️ ساخته شده در  [MagicTeam](https://telegram.me/magicnews) با ❤️ توسط @jan123\nیکی را انتخاب کنید: '
+            return '💫 به ربات "آنتی اسپم نیترو " خوش امدید :)\n⚜️ ساخته شده در  [NitroAntiSpam](https://telegram.me/NitroAntiSpam) با ❤️ توسط @MohammadHasan_rad\nیکی را انتخاب کنید: '
     if s == 'newsubset' :
         if l == 'en' :
             return '🚀 User \n'+inf(arg['user'])+'\nJoined to robot as your subset.'
@@ -790,7 +790,7 @@ def ln(l,s,arg = None) :
     🔸Warn Action => _"""+(warnaction or 'kick')+"""_
     🔸Welcome Status: _"""+(wlc or 'Disable')+"""_
          -----------------------
-Channel:@MagicNews"""
+Channel:@NitroAntiSpam"""
         return settings
     elif s == 'chatinfot' :
         if l == 'en' :
@@ -1631,7 +1631,7 @@ def group_all(m):
             if m.content_type == 'new_chat_member' :
                 if m.new_chat_member.id == boti.id :
                     if is_admin(m.from_user.id) or int(gg(m.chat.id,"inviter") or 0) == m.from_user.id :
-                        bot.reply_to(m,"<b>Hi wlc to my self!</b>\n<code>I am magic api bot please set me admin to help you for managing your group!</code>\n<b>** Without admin access I am just a fun bot:)</b>",parse_mode="Html")
+                        bot.reply_to(m,"<b>Hi wlc to my self!</b>\n<code>I am nitro api bot please set me admin to help you for managing your group!</code>\n<b>** Without admin access I am just a fun bot:)</b>",parse_mode="Html")
                         db.sadd("bot:groups",m.chat.id)
                         gs(m.chat.id,"inviter",m.from_user.id)
                         return
